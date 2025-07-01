@@ -29,9 +29,9 @@ pipeline {
         stage('Run Container') {
             steps {
                 script {
-                    sh 'docker stop calculadora-app || true'
-                    sh 'docker rm calculadora-app || true'
-                    sh 'docker run -d --name calculadora-app -p 7777:7777 calculadora-app'
+                    bat 'docker stop calculadora-app || true'
+                    bat 'docker rm calculadora-app || true'
+                    bat 'docker run -d --name calculadora-app -p 7777:7777 calculadora-app'
                 }
             }
         }
