@@ -30,8 +30,8 @@ pipeline {
             steps {
                 script {
                     bat '''
-                        docker stop calculadora-app || echo No container to stop888
-                        docker rm calculadora-app || echo No container to remove888
+                        docker stop calculadora-app || echo No container to stop
+                        docker rm calculadora-app || echo No container to remove
                         docker run -d --name calculadora-app -p 7777:7777 calculadora-app
                     '''
                 }
